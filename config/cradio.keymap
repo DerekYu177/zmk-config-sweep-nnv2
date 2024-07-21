@@ -14,8 +14,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <1 1>;
+            then-layer = <2>;
         };
     };
 
@@ -44,7 +44,7 @@
 
         combo-alt {
             bindings = <&kp RALT>;
-            key-positions = <27 28>;
+            key-positions = <21 22>;
         };
     };
 
@@ -53,28 +53,19 @@
 
         base {
             bindings = <
-&kp Q             &kp W  &kp E  &kp R             &kp T    &kp Y        &kp U              &kp I      &kp O    &kp P
-&kp A             &kp S  &kp D  &kp F             &kp G    &kp H        &kp J              &kp K      &kp L    &kp COLON
-&mt LEFT_SHIFT Z  &kp X  &kp C  &kp V             &kp B    &kp N        &kp M              &kp COMMA  &kp DOT  &mt FSLH RIGHT_SHIFT
-                                &kp LEFT_COMMAND  &mo 1    &lt 2 SPACE  &kp RIGHT_CONTROL
-            >;
-        };
-
-        left-thumb {
-            bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT       &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp GRAVE        &kp TILDE    &trans    &trans      &kp UNDERSCORE    &kp EQUAL  &kp MINUS      &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE
-&trans           &trans       &trans    &trans      &trans            &trans     &trans         &trans        &trans                &trans
-                                        &trans      &trans            &trans     &trans
+&kp Q  &kp W  &kp E  &kp R             &kp T        &kp Y        &kp U       &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F             &kp G        &kp H        &kp J       &kp K      &kp L    &kp COLON
+&kp Z  &kp X  &kp C  &kp V             &kp B        &kp N        &kp M       &kp COMMA  &kp DOT  &kp SLASH
+                     &kp LEFT_COMMAND  &kp LCTRL    &lt 1 SPACE  &kp RSHIFT
             >;
         };
 
         right-thumb {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9       &kp NUMBER_0
-&trans        &kp TILDE     &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans          &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT          &kp SEMICOLON
-&trans        &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans          &kp PIPE      &kp BACKSLASH  &kp SQT       &kp DOUBLE_QUOTES  &trans
-                                              &trans             &trans          &trans        &trans
+&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9       &kp NUMBER_0
+&kp GRAVE       &kp TILDE     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp MINUS       &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT          &kp SEMICOLON
+&kp LEFT_SHIFT  &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL       &kp PIPE      &kp BACKSLASH  &kp SQT       &kp DOUBLE_QUOTES  &kp RSHIFT
+                                                &trans             &trans          &trans        &trans
             >;
         };
 
