@@ -10,14 +10,7 @@
 // #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <1 1>;
-            then-layer = <2>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     combos {
         compatible = "zmk,combos";
@@ -46,6 +39,11 @@
             bindings = <&kp RALT>;
             key-positions = <21 22>;
         };
+
+        combo-meta-layer {
+            bindings = <&mo 2>;
+            key-positions = <31 32>;
+        };
     };
 
     keymap {
@@ -69,7 +67,7 @@
             >;
         };
 
-        tri_layer {
+        meta {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &trans             &trans           &trans  &sys_reset
 &trans        &trans        &trans        &trans        &trans          &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &bootloader
