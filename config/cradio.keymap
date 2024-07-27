@@ -22,11 +22,6 @@
             key-positions = <11 12>;
         };
 
-        combo-backspace {
-            bindings = <&kp BSPC>;
-            key-positions = <8 7>;
-        };
-
         combo-tab {
             bindings = <&kp TAB>;
             key-positions = <1 2>;
@@ -57,17 +52,17 @@
 
         layer-control {
             bindings = <
-&kp EXCLAMATION   &kp AT_SIGN  &kp HASH   &kp DOLLAR        &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LEFT_CONTROL  &kp GRAVE    &kp TILDE  &kp SEMICOLON     &trans         &trans     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE
-&kp LSHIFT        &kp LCTRL    &sk LALT   &trans            &trans         &trans     &trans          &trans        &trans                &trans
-                                          &kp LEFT_COMMAND  &trans         &trans     &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR        &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp GRAVE        &kp TILDE    &sk LALT  &kp SEMICOLON     &trans         &trans     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE
+&kp LSHIFT       &kp LCTRL    &trans    &trans            &trans         &trans     &trans          &trans        &trans                &trans
+                                        &kp LEFT_COMMAND  &trans         &trans     &trans
             >;
         };
 
         right-thumb {
             bindings = <
 &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0
-&trans          &trans        &trans        &trans        &trans          &trans        &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans          &trans        &kp LALT      &trans        &trans          &trans        &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &trans        &trans        &trans        &trans          &kp PIPE      &kp BACKSLASH  &trans        &trans            &kp RSHIFT
                                             &trans        &trans          &trans        &trans
             >;
@@ -84,10 +79,10 @@
 
         layer-arrow {
             bindings = <
-&trans      &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans
-&kp LCTRL   &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SQT
-&kp LSHIFT  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &kp RSHIFT
-                            &trans  &trans    &trans    &trans
+&trans      &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans     &kp BACKSPACE
+&kp LCTRL   &trans  &kp LALT  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SQT
+&kp LSHIFT  &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans     &kp RSHIFT
+                              &trans  &trans    &trans    &trans
             >;
         };
     };
