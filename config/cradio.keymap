@@ -40,7 +40,7 @@
         combo-alt {
             bindings = <&kp RALT>;
             key-positions = <21 22>;
-            timeout-ms = <5>;
+            timeout-ms = <0>;
         };
 
         combo-meta-layer {
