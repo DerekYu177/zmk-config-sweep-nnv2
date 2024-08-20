@@ -17,21 +17,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo-escape {
-            bindings = <&kp ESC>;
-            key-positions = <11 12>;
-        };
-
-        combo-tab {
-            bindings = <&kp TAB>;
-            key-positions = <1 2>;
-        };
-
-        combo-enter {
-            bindings = <&kp ENTER>;
-            key-positions = <18 17>;
-        };
-
         combo-meta-layer {
             bindings = <&mo 3>;
             key-positions = <31 32>;
@@ -52,19 +37,19 @@
 
         layer-control {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR        &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp GRAVE        &kp TILDE    &sk LALT  &kp SEMICOLON     &trans         &trans     &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE
-&kp LSHIFT       &kp LCTRL    &trans    &trans            &trans         &trans     &trans          &trans        &trans                &trans
-                                        &kp LEFT_COMMAND  &trans         &trans     &trans
+&kp TAB     &kp GRAVE  &kp EXCLAMATION  &kp AT            &kp HASH                &kp N0                 &kp N1  &kp N2  &kp N3  &kp BACKSLASH
+&kp ESCAPE  &kp TILDE  &kp DOLLAR       &kp PERCENT       &kp CARET               &trans                 &kp N4  &kp N5  &kp N6  &kp SINGLE_QUOTE
+&kp LSHIFT  &kp LCTRL  &kp AMPERSAND    &kp ASTERISK      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N7  &kp N8  &kp N9  &kp RSHIFT
+                                        &kp LEFT_COMMAND  &trans                  &trans                 &trans
             >;
         };
 
         right-thumb {
             bindings = <
-&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0
-&trans          &trans        &kp LALT      &trans        &trans          &trans        &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &trans        &trans        &trans        &trans          &kp PIPE      &kp BACKSLASH  &trans        &trans            &kp RSHIFT
-                                            &trans        &trans          &trans        &trans
+&trans          &trans     &trans        &trans  &trans    &trans     &trans          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans          &trans     &trans        &trans  &trans    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
+&kp LEFT_SHIFT  &kp LCTRL  &sk LEFT_ALT  &trans  &trans    &kp PLUS   &kp MINUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RSHIFT
+                                         &trans  &trans    &trans     &trans
             >;
         };
 
@@ -80,7 +65,7 @@
         layer-arrow {
             bindings = <
 &trans      &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans     &kp BACKSPACE
-&kp LCTRL   &trans  &kp LALT  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SQT
+&kp LCTRL   &trans  &kp LALT  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp ENTER
 &kp LSHIFT  &trans  &trans    &trans  &trans    &trans    &trans    &trans  &trans     &kp RSHIFT
                               &trans  &trans    &trans    &trans
             >;
