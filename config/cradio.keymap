@@ -46,19 +46,19 @@
 
         layer-arrow {
             bindings = <
-&trans      &trans  &trans  &trans        &trans    &kp N6          &kp N7    &kp N8     &kp N9    &kp N0
-&trans      &trans  &trans  &trans        &trans    &kp UNDERSCORE  &kp RET   &kp EQUAL  &kp BSLH  &kp APOS
-&kp LSHIFT  &trans  &trans  &trans        &trans    &kp MINUS       &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT
-                            &kp LC(LALT)  &trans    &trans          &trans
+&trans      &trans     &trans            &trans    &trans    &kp N6          &kp N7    &kp N8     &kp N9    &kp N0
+&trans      &trans     &trans            &trans    &trans    &kp UNDERSCORE  &kp RET   &kp EQUAL  &kp BSLH  &kp APOS
+&kp LSHIFT  &kp LCTRL  &kp LEFT_COMMAND  &kp LALT  &trans    &kp MINUS       &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT
+                                         &trans    &trans    &trans          &trans
             >;
         };
 
         right-deep-thumb {
             bindings = <
-&trans          &trans     &trans        &trans  &trans    &kp SEMI   &kp PIPE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans          &trans     &trans        &trans  &trans    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
-&sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT  &trans  &trans    &kp PLUS   &kp MINUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RSHIFT
-                                         &trans  &trans    &trans     &trans
+&trans          &trans     &trans            &trans    &trans    &kp SEMI   &kp PIPE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans          &trans     &trans            &trans    &trans    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
+&sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_COMMAND  &kp LALT  &trans    &kp PLUS   &kp MINUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RSHIFT
+                                             &trans    &trans    &trans     &trans
             >;
         };
 
