@@ -9,7 +9,10 @@
 // #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 // #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
-&mt { tapping-term-ms = <400>; };
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+};
 
 / {
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -18,7 +21,7 @@
         compatible = "zmk,combos";
 
         combo-meta-layer {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <31 32>;
         };
     };
@@ -44,6 +47,15 @@
             >;
         };
 
+        right-deep-thumb {
+            bindings = <
+&kp TAB    &trans     &trans    &trans    &trans    &trans    &trans    &trans  &trans     &kp BSPC
+&kp LSHFT  &kp LCTRL  &kp LALT  &trans    &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
+&trans     &trans     &trans    &trans    &trans    &trans    &trans    &trans  &trans     &trans
+                                &kp LGUI  &trans    &trans    &trans
+            >;
+        };
+
         right-thumb {
             bindings = <
 &kp N1     &kp N2     &kp N3    &kp N4    &kp N5    &kp N6          &kp N7     &kp N8          &kp N9                          &kp N0
@@ -53,20 +65,11 @@
             >;
         };
 
-        right-deep-thumb {
-            bindings = <
-&trans     &trans     &trans    &trans    &trans    &trans    &trans    &trans  &trans     &kp BSPC
-&kp LSHFT  &kp LCTRL  &kp LALT  &trans    &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
-&trans     &trans     &trans    &trans    &trans    &trans    &trans    &trans  &trans     &trans
-                                &kp LGUI  &trans    &trans    &trans
-            >;
-        };
-
         meta {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &trans             &trans           &trans  &sys_reset
-&trans        &trans        &trans        &trans        &trans          &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &bootloader
-&trans        &trans        &trans        &trans        &trans          &trans      &trans             &trans           &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &sys_reset
+&trans        &trans        &trans        &trans        &trans          &kp K_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans  &bootloader
+&trans        &trans        &trans        &trans        &trans          &trans      &trans                &trans                &trans  &trans
                                           &trans        &trans          &trans      &trans
             >;
         };
