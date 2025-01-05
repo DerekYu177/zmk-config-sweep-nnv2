@@ -21,7 +21,7 @@
         compatible = "zmk,combos";
 
         combo-meta-layer {
-            bindings = <&mo 5>;
+            bindings = <&mo 4>;
             key-positions = <31 32>;
         };
     };
@@ -49,10 +49,10 @@
 
         right-deep-thumb {
             bindings = <
-&kp TAB    &trans     &trans    &trans    &trans    &trans    &trans    &trans  &trans     &kp BSPC
-&kp LSHFT  &kp LCTRL  &kp LALT  &trans    &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
-&trans     &trans     &trans    &trans    &trans    &trans    &trans    &trans  &trans     &trans
-                                &kp LGUI  &trans    &trans    &trans
+&kp TAB    &trans     &trans    &trans     &trans    &trans    &trans    &trans  &trans     &kp BSPC
+&kp LSHFT  &kp LCTRL  &kp LALT  &kp TILDE  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
+&trans     &trans     &trans    &trans     &trans    &trans    &trans    &trans  &trans     &trans
+                                &kp LGUI   &trans    &trans    &trans
             >;
         };
 
