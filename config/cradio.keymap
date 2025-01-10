@@ -31,37 +31,37 @@
 
         base {
             bindings = <
-&kp Q         &kp W        &kp E       &kp R             &kp T    &kp Y        &kp U  &kp I       &kp O        &kp P
-&mt LSHIFT A  &mt LCTRL S  &mt LALT D  &kp F             &kp G    &kp H        &kp J  &mt RALT K  &mt RCTRL L  &mt RSHIFT COLON
-&kp Z         &kp X        &kp C       &kp V             &kp B    &kp N        &kp M  &kp COMMA   &kp DOT      &kp FSLH
-                                       &kp LEFT_COMMAND  &mo 1    &lt 2 SPACE  &mo 3
+&kp Q  &kp W        &kp E       &kp R       &kp T    &kp Y        &kp U       &kp I       &kp O        &kp P
+&kp A  &mt LCTRL S  &mt LALT D  &mt RGUI F  &kp G    &kp H        &mt RGUI J  &mt RALT K  &mt RCTRL L  &kp COLON
+&kp Z  &kp X        &kp C       &kp V       &kp B    &kp N        &kp M       &kp COMMA   &kp DOT      &kp FSLH
+                                &kp LSHIFT  &mo 1    &lt 2 SPACE  &mo 3
             >;
         };
 
         left-thumb {
             bindings = <
-&kp EXCLAMATION        &kp AT_SIGN           &kp HASH                  &kp DOLLAR        &kp PERCENT      &kp CARET  &kp AMPERSAND   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&mt LEFT_SHIFT ESCAPE  &mt LCTRL LEFT_BRACE  &mt LEFT_ALT RIGHT_BRACE  &kp GRAVE         &kp SEMICOLON    &kp PIPE   &kp UNDERSCORE  &mt RALT PLUS  &kp LCTRL             &kp RSHFT
-&trans                 &trans                &trans                    &trans            &trans           &trans     &trans          &trans         &trans                &trans
-                                                                       &kp LEFT_COMMAND  &trans           &trans     &trans
+&kp F1   &kp F2     &kp F3        &kp F4      &kp F5     &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&kp ESC  &kp LCTRL  &kp LEFT_ALT  &kp LGUI    &kp TAB    &trans   &trans   &trans  &trans  &trans
+&trans   &trans     &trans        &trans      &trans     &kp F11  &kp F12  &trans  &trans  &trans
+                                  &kp LSHIFT  &trans     &trans   &trans
             >;
         };
 
         right-deep-thumb {
             bindings = <
-&kp TAB    &trans     &trans    &trans     &trans    &trans    &trans    &trans  &trans     &kp BSPC
-&kp LSHFT  &kp LCTRL  &kp LALT  &kp TILDE  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
-&trans     &trans     &trans    &trans     &trans    &trans    &trans    &trans  &trans     &trans
-                                &kp LGUI   &trans    &trans    &trans
+&trans  &trans     &trans    &trans      &trans    &trans    &trans    &trans  &trans     &kp BSPC
+&trans  &kp LCTRL  &kp LALT  &kp LGUI    &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
+&trans  &trans     &trans    &trans      &trans    &trans    &trans    &trans  &trans     &trans
+                             &kp LSHIFT  &trans    &trans    &trans
             >;
         };
 
         right-thumb {
             bindings = <
-&kp N1     &kp N2     &kp N3    &kp N4    &kp N5    &kp N6          &kp N7     &kp N8          &kp N9                          &kp N0
-&kp LSHFT  &kp LCTRL  &kp LALT  &kp SQT   &trans    &kp UNDERSCORE  &kp MINUS  &mt RALT EQUAL  &mt RIGHT_CONTROL LEFT_BRACKET  &mt RSHIFT RIGHT_BRACKET
-&trans     &trans     &trans    &trans    &trans    &trans          &trans     &trans          &trans                          &trans
-                                &kp LGUI  &trans    &trans          &trans
+&kp N1     &kp N2     &kp N3    &kp N4      &kp N5           &kp N6  &kp N7          &kp N8    &kp N9             &kp N0
+&kp GRAVE  &kp LCTRL  &kp LALT  &kp LGUI    &kp SEMICOLON    &trans  &mt RGUI MINUS  &kp RALT  &kp RIGHT_CONTROL  &kp SQT
+&trans     &trans     &trans    &trans      &trans           &trans  &kp EQUAL       &kp LBKT  &kp RBKT           &kp BSLH
+                                &kp LSHIFT  &trans           &trans  &trans
             >;
         };
 
