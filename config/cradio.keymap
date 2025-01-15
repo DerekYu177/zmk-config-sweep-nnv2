@@ -1,6 +1,8 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // default 600
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -9,16 +11,6 @@
 // Home row mods macro
 // #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 // #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
-
-// these are purely shortcuts such that layer 3 look nice :)
-// #define MOUSE_UP    (&mmv MOVE_UP)
-// #define MOUSE_R     (&mmv MOVE_RIGHT)
-// #define MOUSE_L     (&mmv MOVE_LEFT)
-// #define MOUSE_D     (&mmv MOVE_DOWN)
-// #define B_UP        (&kp C_BRIGHTNESS_INC)
-// #define B_DOWN      (&kp C_BRIGHTNESS_DEC)
-// #define V_UP        (&kp VOLUME_UP)
-// #define V_D         (&kp VOLUME_DOWN)
 
 &mt {
     tapping-term-ms = <200>;
@@ -30,11 +22,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        // combo-meta-layer {
-        //     bindings = <&mo 4>;
-        //     key-positions = <31 32>;
-        // };
     };
 
     keymap {
@@ -62,7 +49,7 @@
 // ├───────────┼───────────┼───────────┼───────────┼───────────┤ ├───────────┼───────────┼───────────┼───────────┼───────────┤
      &kp GRAVE   &kp LCTRL   &kp LALT   &kp LGUI   &kp SEMICOLON    &trans  &mt RGUI MINUS &kp RALT  &kp RIGHT_CONTROL &kp SQT
 // ├───────────┼───────────┼───────────┼───────────┼───────────┤ ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        &kp TAB      &trans      &trans      &trans      &trans      &trans      &kp EQUAL    &kp LBKT   &kp RBKT    &kp BSLH
+    &kp TAB  &kp LEFT_BRACE &kp RIGHT_BRACE &kp UNDER  &trans      &trans      &kp EQUAL    &kp LBKT   &kp RBKT    &kp BSLH
 // ╰───────────┴───────────┴───────────┼───────────┼───────────┤ ├───────────┼───────────┼───────────┴───────────┴───────────╯
                                             &kp LSHIFT  &trans      &mo 4      &trans
 //                                     ╰───────────┴───────────╯ ╰───────────┴───────────╯
@@ -86,9 +73,9 @@
         right-deep-thumb {
             bindings = <
 // ╭───────────┬───────────┬───────────┬───────────┬───────────╮ ╭───────────┬───────────┬───────────┬───────────┬───────────╮
-    &trans &trans &trans &trans &trans                              &kp C_VOLUME_UP   &mkp RCLK       &mmv MOVE_UP    &mkp LCLK       &kp C_BRIGHTNESS_INC
+    &bt BT_CLR_ALL &bt BT_CLR &trans &trans &trans          &kp C_VOLUME_UP     &mkp RCLK       &mmv MOVE_UP    &mkp LCLK       &kp C_BRIGHTNESS_INC
 // ├───────────┼───────────┼───────────┼───────────┼───────────┤ ├───────────┼───────────┼───────────┼───────────┼───────────┤
-    &trans &trans &trans &trans &trans                              &kp C_VOLUME_DOWN &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &kp C_BRIGHTNESS_DEC
+    &trans &trans &trans &trans &trans                      &kp C_VOLUME_DOWN   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &kp C_BRIGHTNESS_DEC
 // ├───────────┼───────────┼───────────┼───────────┼───────────┤ ├───────────┼───────────┼───────────┼───────────┼───────────┤
     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans     &trans     &trans      &trans       &trans
 // ╰───────────┴───────────┴───────────┼───────────┼───────────┤ ├───────────┼───────────┼───────────┴───────────┴───────────╯
